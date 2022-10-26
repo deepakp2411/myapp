@@ -15,7 +15,14 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.grey.shade400,
             appBar: AppBar(
               backgroundColor: Colors.green,
-              title: const Text('DEEPAK PATEL'),
+              title: const Center(
+                  child: const Text(
+                'DEEPAK PATEL',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.amber
+                ),
+              )),
             ),
             body: SafeArea(
               child: Column(
@@ -25,11 +32,16 @@ class MyApp extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: const [
-                      Text('data'),
+                      Text('data i am being',
+                          style: TextStyle(fontStyle: FontStyle.italic)),
                       Icon(Icons.ac_unit),
-                      Text('data')
+                      Text(
+                        'data',
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                            fontSize: 20, fontWeight: FontWeight.w800),
+                      )
                     ],
-
                   ),
                   const SizedBox(
                     height: 40,
