@@ -1,33 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:myfirstapp/screens/dashboard.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Lottery App'),
-        ),
-        body: Column(),
-        floatingActionButton: FloatingActionButton(
-          onPressed:() {  
-            print('Tab');        
-          },
-          child: Icon(Icons.refresh),
-        ),
-      ),
+      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData.dark(),
+      title: 'Hey i Am',
+      home: Dashboard()
     );
   }
 }
